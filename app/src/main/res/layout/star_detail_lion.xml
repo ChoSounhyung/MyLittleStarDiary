@@ -34,7 +34,7 @@
         android:src="@drawable/back_icon"/>
 
     <RelativeLayout
-        android:id="@+id/bottle_layout"
+        android:id="@+id/lion_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -50,7 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"
-            android:layout_marginLeft="150dp"/>
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/star_lion"/>
 
     </RelativeLayout>
 

@@ -41,6 +41,7 @@
                 android:textColor="@color/white"/>
 
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -67,6 +68,8 @@
                     android:src="@drawable/star_lion"/>
 
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -207,6 +210,8 @@
                     android:src="@drawable/star_lion"/>
 
             </LinearLayout>
+
+
 
         </LinearLayout>
 

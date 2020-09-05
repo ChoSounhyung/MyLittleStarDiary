@@ -12,7 +12,8 @@ import android.widget.ImageButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class StarActivity extends AppCompatActivity {
-    private ImageButton lionBtn;
+    ImageButton bottleBtn;
+    ImageButton lionBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,6 @@ public class StarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_star);
 
         init();
-        setUp();
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -48,22 +48,18 @@ public class StarActivity extends AppCompatActivity {
             }
         });
 
+        bottleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     private void init() {
+        bottleBtn = findViewById(R.id.star_bottle_btn);
         lionBtn = findViewById(R.id.star_lion_btn);
     }
 
-    private void setUp() {
-        lionBtn.setOnClickListener(goStarDetailPage);
-    }
-
-    // Image Button Click
-    View.OnClickListener goStarDetailPage = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(StarActivity.this, StarDetailActivity.class);
-            startActivity(intent);
-        }
-    };
 }
