@@ -16,6 +16,10 @@ public class DiaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
 
+        setBottomNav();
+    }
+
+    public void setBottomNav() {
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 

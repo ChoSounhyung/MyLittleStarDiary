@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setBottomNav();
+
+    }
+
+    public void setBottomNav() {
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
