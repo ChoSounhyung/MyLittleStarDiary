@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiaryActivity">
+    tools:context=".StarDetailActivity"
+    android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -13,10 +14,66 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/back_star"
-            android:scaleType="matrix"/>
+            android:scaleType="matrix"
+            android:src="@drawable/back_star" />
 
     </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/star_rect_toolbar"/>
+
+    <ImageView
+        android:id="@+id/star_back"
+        android:background="@android:color/transparent"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/back_icon"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="90dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="450dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/star_rect"/>
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="450dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/star_rect"/>
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="450dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/star_rect"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
