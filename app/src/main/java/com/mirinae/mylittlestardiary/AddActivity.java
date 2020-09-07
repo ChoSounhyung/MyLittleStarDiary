@@ -61,6 +61,10 @@ public class AddActivity extends AppCompatActivity {
                         return true;
                     case R.id.add:
                         return true;
+                    case R.id.search:
+                        startActivity(new Intent(getApplicationContext(), SearchActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
                 return false;
             }
