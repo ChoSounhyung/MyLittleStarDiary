@@ -54,7 +54,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_bottle"/>
 
                 <ImageButton
                     android:id="@+id/star_fish_btn"
@@ -65,7 +65,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_fish"/>
 
             </LinearLayout>
 
@@ -84,7 +84,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_sheep"/>
 
                 <ImageButton
                     android:id="@+id/star_ox_btn"
@@ -95,7 +95,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_ox"/>
 
             </LinearLayout>
 
@@ -112,7 +112,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_twin"/>
 
                 <ImageButton
                     android:id="@+id/star_crab_btn"
@@ -123,7 +123,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_crab"/>
 
             </LinearLayout>
 
@@ -151,7 +151,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_woman"/>
 
             </LinearLayout>
 
@@ -168,7 +168,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_balance"/>
 
                 <ImageButton
                     android:id="@+id/star_scorpion_btn"
@@ -179,7 +179,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_scorpion"/>
 
             </LinearLayout>
 
@@ -196,7 +196,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_centaur"/>
 
                 <ImageButton
                     android:id="@+id/star_goat_btn"
@@ -207,7 +207,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/star_rect"
-                    android:src="@drawable/star_lion"/>
+                    android:src="@drawable/star_goat"/>
 
             </LinearLayout>
 
