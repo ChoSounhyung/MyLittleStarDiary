@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),StarActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.diary:
+                    case R.id.add:
                         startActivity(new Intent(getApplicationContext(),DiaryActivity.class));
                         overridePendingTransition(0, 0);
                         return true;

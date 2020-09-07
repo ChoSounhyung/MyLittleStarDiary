@@ -48,7 +48,7 @@ public class DiaryActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         //Set Home Selected
-        bottomNavigationView.setSelectedItemId(R.id.diary);
+        bottomNavigationView.setSelectedItemId(R.id.add);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -63,7 +63,7 @@ public class DiaryActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),StarActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.diary:
+                    case R.id.add:
                         return true;
                 }
                 return false;

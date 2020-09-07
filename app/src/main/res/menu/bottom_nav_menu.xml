@@ -14,8 +14,8 @@
         android:title="star" />
 
     <item
-        android:id="@+id/diary"
-        android:icon="@drawable/bottom_nav_diary_icon"
+        android:id="@+id/add"
+        android:icon="@drawable/add_icon"
         android:iconTint="@color/white"
-        android:title="diary" />
+        android:title="add" />
 </menu>
