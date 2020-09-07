@@ -8,6 +8,12 @@
         android:title="home" />
 
     <item
+        android:id="@+id/search"
+        android:icon="@drawable/search_icon"
+        android:iconTint="@color/white"
+        android:title="search" />
+
+    <item
         android:id="@+id/star"
         android:icon="@drawable/bottom_nav_star_icon"
         android:iconTint="@color/white"
