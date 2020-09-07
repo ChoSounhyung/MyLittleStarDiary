@@ -40,7 +40,7 @@ public class StarActivity extends AppCompatActivity {
                     case R.id.star:
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext(),DiaryActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AddActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                 }

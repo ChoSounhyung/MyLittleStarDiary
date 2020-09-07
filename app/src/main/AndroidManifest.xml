@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.StatusBar">
         <activity android:name=".StarDetailActivity"></activity>
-        <activity android:name=".DiaryActivity" />
+        <activity android:name=".AddActivity" />
         <activity android:name=".StarActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
