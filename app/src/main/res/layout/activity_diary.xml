@@ -19,19 +19,38 @@
 
     </FrameLayout>
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:src="@drawable/star_rect_toolbar"/>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/diary_back"
-        android:background="@android:color/transparent"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="18dp"
-        android:src="@drawable/back_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/star_rect_toolbar"/>
+
+        <ImageView
+            android:id="@+id/diary_back"
+            android:background="@android:color/transparent"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="추가"
+            android:fontFamily="@font/main_font_regular"
+            android:textColor="@color/navy"
+            android:textSize="21sp"/>
+
+    </RelativeLayout>
+
+
 
     <ScrollView
         android:layout_width="match_parent"
