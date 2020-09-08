@@ -16,9 +16,8 @@ import com.mirinae.mylittlestardiary.R;
 
 import java.util.List;
 
-import static com.mirinae.mylittlestardiary.adapter.DiaryItemAdapter.*;
 
-public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemViewHolder> {
+public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.DiaryItemViewHolder> {
     private List<Diary> diaryList;
     private Activity mainActivity;
 
