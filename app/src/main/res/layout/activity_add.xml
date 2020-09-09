@@ -29,7 +29,7 @@
             android:src="@drawable/star_rect_toolbar"/>
 
         <ImageView
-            android:id="@+id/diary_back"
+            android:id="@+id/add_back"
             android:background="@android:color/transparent"
             android:layout_width="30dp"
             android:layout_height="40dp"
