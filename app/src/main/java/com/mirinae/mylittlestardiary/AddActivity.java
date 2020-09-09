@@ -46,32 +46,6 @@ public class AddActivity extends AppCompatActivity {
         //Set Home Selected
         bottomNavigationView.setSelectedItemId(R.id.add);
 
-        //Perform ItemSelectedListener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.star:
-                        startActivity(new Intent(getApplicationContext(),StarActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.add:
-                        return true;
-                    case R.id.search:
-                        startActivity(new Intent(getApplicationContext(), SearchActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
-//    View.OnClickListener = new View.OnClickListener() {
-//
-//    }
 }
