@@ -55,14 +55,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="90dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="90dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -70,10 +70,10 @@
 
                 <ImageView
                     android:layout_width="380dp"
-                    android:layout_height="500dp"
+                    android:layout_height="550dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="50dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/star_rect"/>
 
@@ -83,12 +83,12 @@
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginBottom="15dp">
 
                         <TextView
@@ -101,7 +101,7 @@
 
                         <EditText
                             android:id="@+id/input_date"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="yyyy.mm.dd"
@@ -113,8 +113,8 @@
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginBottom="20dp">
 
                         <TextView
@@ -127,7 +127,7 @@
 
                         <EditText
                             android:id="@+id/input_title"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="엄마 생신"
@@ -144,11 +144,12 @@
 
                     <EditText
                         android:id="@+id/input_contents"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
                         android:layout_marginTop="20dp"
                         android:background="@null"
                         android:hint="내용을 입력하세요"
+                        android:gravity="top"
                         android:fontFamily="@font/main_font_regular"
                         android:maxLines="1"/>
 
@@ -159,18 +160,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
-        app:itemBackground="@color/black"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
-        app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
