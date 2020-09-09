@@ -71,10 +71,6 @@ public class SearchActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),StarActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.add:
-                        startActivity(new Intent(getApplicationContext(), AddActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                     case R.id.search:
                         return true;
                 }

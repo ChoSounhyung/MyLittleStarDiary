@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mirinae.mylittlestardiary.adapter.DiaryItemAdapter;
 
@@ -65,10 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),StarActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.add:
-                        startActivity(new Intent(getApplicationContext(), AddActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                     case R.id.search:
                         startActivity(new Intent(getApplicationContext(), SearchActivity.class));
                         overridePendingTransition(0, 0);
@@ -78,4 +75,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

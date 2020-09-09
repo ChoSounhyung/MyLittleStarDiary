@@ -40,10 +40,6 @@ public class StarActivity extends AppCompatActivity {
                         return true;
                     case R.id.star:
                         return true;
-                    case R.id.add:
-                        startActivity(new Intent(getApplicationContext(), AddActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                     case R.id.search:
                         startActivity(new Intent(getApplicationContext(), SearchActivity.class));
                         overridePendingTransition(0, 0);
