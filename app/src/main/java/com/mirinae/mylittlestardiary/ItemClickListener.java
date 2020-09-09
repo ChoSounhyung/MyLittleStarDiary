@@ -15,7 +15,7 @@ public class ItemClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(activity, StarDetailActivity.class);
+        Intent intent = new Intent(activity, DiaryDetailActivity.class);
 
         intent.putExtra("itemId", itemId);
 
