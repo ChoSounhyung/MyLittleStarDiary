@@ -5,15 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.mirinae.mylittlestardiary.adapter.DiaryItemAdapter;
+import com.mirinae.mylittlestardiary.adapter.SearchItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +19,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private List<Diary> diaryList = new ArrayList<>();
     private RecyclerView searchRecyclerView;
-    private DiaryItemAdapter searchItemAdapter;
+    private SearchItemAdapter searchItemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +36,7 @@ public class SearchActivity extends AppCompatActivity {
         diaryList.add(diary2);
 
         // RecyclerView Adapter 생성 및 Diary List 전달
-        searchItemAdapter = new DiaryItemAdapter(diaryList, this);
+        searchItemAdapter = new SearchItemAdapter(diaryList, this);
         // RecyclerView Manager를 LinearLayout으로 설정
         searchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         // RecyclerView Adapter 설정
@@ -78,4 +75,5 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
     }
+
 }

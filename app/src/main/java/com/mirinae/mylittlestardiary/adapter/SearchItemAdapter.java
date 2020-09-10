@@ -17,7 +17,6 @@ import com.mirinae.mylittlestardiary.R;
 import java.util.List;
 
 public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.SearchItemViewHolder> {
-
     private List<Diary> diaryList;
     private Activity searchActivity;
 
@@ -25,15 +24,15 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Se
         LinearLayout searchItemContainer;
         TextView searchTitle;
 
-        //Constructor
+        // Constructor
         public SearchItemViewHolder(View v) {
             super(v);
-            searchItemContainer = v.findViewById(R.id.search_item_container);
-            searchTitle = v.findViewById(R.id.search_title);
+            searchItemContainer = (LinearLayout) v.findViewById(R.id.search_item_container);
+            searchTitle = (TextView) v.findViewById(R.id.search_title);
         }
     }
 
-    //Constructor
+    // Constructor
     public SearchItemAdapter(List<Diary> diaryList, Activity searchActivity) {
         this.diaryList = diaryList;
         this.searchActivity = searchActivity;
@@ -47,7 +46,7 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Se
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SearchItemViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchItemViewHolder holder, int position) {// onClick event
         holder.searchItemContainer.setOnClickListener(new ItemClickListener(searchActivity, 1));
     }
 
