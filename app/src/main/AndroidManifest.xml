@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.StatusBar">
-        <activity android:name=".DiaryDetailActivity"></activity>
+        <activity android:name=".AddActivity"></activity>
+        <activity android:name=".DiaryDetailActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".StarDetailActivity" />
-        <activity android:name=".AddActivity" />
         <activity android:name=".StarActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
