@@ -7,9 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mirinae.mylittlestardiary.adapter.DiaryItemAdapter;
 
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Diary> diaryList = new ArrayList<>();
     private RecyclerView diaryRecyclerView;
     private DiaryItemAdapter diaryItemAdapter;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         setBottomNav();
         init();
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AddActivity.class));
+            }
+        });
 
         Diary diary1 = new Diary("2020.09.05", "집 가고 싶다", "요즘에는 집에 있는데도 집에 가고싶은 기분이다..");
         Diary diary2 = new Diary("2020.09.08", "오느른 내생일", "오늘은 드디어 내 생일이다. 생일인데 집에서 온라인 수업을 듣다니, 기숙사가 아닌걸 다해이라고 해야되나.");
@@ -46,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void init() {
         diaryRecyclerView = findViewById(R.id.diary_recyclerview);
+        fab = findViewById(R.id.fab);
     }
 
     public void setBottomNav() {
