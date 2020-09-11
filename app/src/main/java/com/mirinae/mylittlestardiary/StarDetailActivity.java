@@ -9,7 +9,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class StarDetailActivity extends AppCompatActivity {
-    private ImageView backBtn1, backBtn2;
+    private ImageView bottle;
+    private ImageView fish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
