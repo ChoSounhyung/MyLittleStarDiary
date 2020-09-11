@@ -26,22 +26,26 @@
         <ImageView
             android:id="@+id/diary_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="35dp"
             android:src="@drawable/back_icon"/>
 
-        <TextView
-            android:id="@+id/add_btn"
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="33dp"
-            android:layout_marginRight="35dp"
-            android:text="추가"
-            android:fontFamily="@font/main_font_bold"
-            android:textColor="@color/white"
-            android:textSize="21sp"/>
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/edit_icon"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/delete_icon"/>
 
         <RelativeLayout
             android:layout_width="350dp"
