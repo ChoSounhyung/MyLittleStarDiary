@@ -79,7 +79,8 @@
                         android:text="2020.09.05"
                         android:fontFamily="@font/main_font_regular"
                         android:textSize="18sp"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -105,7 +106,7 @@
                         android:text="집 가고 싶다"
                         android:fontFamily="@font/main_font_regular"
                         android:textSize="18sp"
-                        android:maxLines="1" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -122,7 +123,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="요즘에는 집에 있는데도 집에 가고싶은 기분이다.. 진짜 맨날 온라인 수업하고, 끝나면 낮잠 쬐끔 자고, 코딩하고... 지겨워 죽겠다 진심으로"
-                    android:fontFamily="@font/main_font_regular"/>
+                    android:fontFamily="@font/main_font_regular"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 

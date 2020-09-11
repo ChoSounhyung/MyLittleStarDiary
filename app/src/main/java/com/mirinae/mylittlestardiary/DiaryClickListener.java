@@ -4,14 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 
-public class ItemClickListener implements View.OnClickListener {
+public class DiaryClickListener implements View.OnClickListener {
     private Activity activity;
     private int itemId;
 
-    public ItemClickListener(Activity activity, int itemId) {
+    public DiaryClickListener(Activity activity, int itemId) {
         this.activity = activity;
         this.itemId = itemId;
     }
+
 
     @Override
     public void onClick(View view) {

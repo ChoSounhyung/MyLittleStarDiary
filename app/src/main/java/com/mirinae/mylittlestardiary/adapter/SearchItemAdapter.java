@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mirinae.mylittlestardiary.Diary;
-import com.mirinae.mylittlestardiary.ItemClickListener;
+import com.mirinae.mylittlestardiary.DiaryClickListener;
 import com.mirinae.mylittlestardiary.R;
 
 import java.util.List;
@@ -47,7 +47,7 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Se
 
     @Override
     public void onBindViewHolder(@NonNull SearchItemViewHolder holder, int position) {// onClick event
-        holder.searchItemContainer.setOnClickListener(new ItemClickListener(searchActivity, 1));
+        holder.searchItemContainer.setOnClickListener(new DiaryClickListener(searchActivity, 1));
     }
 
     @Override

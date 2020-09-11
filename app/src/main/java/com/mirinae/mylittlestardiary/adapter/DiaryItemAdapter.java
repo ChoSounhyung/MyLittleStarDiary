@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mirinae.mylittlestardiary.Diary;
-import com.mirinae.mylittlestardiary.ItemClickListener;
+import com.mirinae.mylittlestardiary.DiaryClickListener;
 import com.mirinae.mylittlestardiary.R;
 
 import java.util.List;
@@ -48,7 +48,7 @@ public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.Diar
 
     @Override
     public void onBindViewHolder(@NonNull DiaryItemViewHolder holder, int position) {// onClick event
-        holder.diaryItemContainer.setOnClickListener(new ItemClickListener(mainActivity, 1));
+        holder.diaryItemContainer.setOnClickListener(new DiaryClickListener(mainActivity, 1));
     }
 
     @Override
