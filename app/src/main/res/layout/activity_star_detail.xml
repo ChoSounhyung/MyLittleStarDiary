@@ -91,7 +91,7 @@
                         android:textColor="@color/black"
                         android:fontFamily="@font/main_font_regular"
                         android:lineSpacingExtra="7dp"
-                        android:textSize="17sp"
+                        android:textSize="16sp"
                         android:text=" 가니메데는 트로이에 살던 소년으로 매우 아름다워 그 아름다움이 천상계에 전해지게 되었대요. 이 소문을 들은 제우스는 독수리로 변하여 트로이에 갔대요. 트로이에서 양을 쫓던 가니메데를 본 제우스는 한눈에 반했다고 해요. 제우스는 독수리의 발톱으로 가니메데를 붙잡아 천상계로 데려가 영원한 젊음과 생명을 주고, 신들이 마시는 넥타르라는 음료를 잔에 부어 돌리는 역할을 맡겼대요. 가니메데는 제우스의 총애를 받아 물병자리가 되었다는 이야기가 전해와요."/>
 
                 </ScrollView>
