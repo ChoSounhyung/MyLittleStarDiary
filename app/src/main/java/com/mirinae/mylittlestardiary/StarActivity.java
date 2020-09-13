@@ -93,7 +93,7 @@ public class StarActivity extends AppCompatActivity {
                 case R.id.star_ox_btn:
                     intent.putExtra("image", R.drawable.star_ox);
                     intent.putExtra(EXTRA_DATE, "4/20~5/20");
-                    intent.putExtra(EXTRA_TEXT, " 제우스가 페니키아의 공주를 유혹하기 위해 흰 황소로 변신했다고 해요. 변한 제우스는 목장에서 놀고 있는 공주를 크레타 섬으로 데려갔대요. 여기서 제우스는 원래 자기 모습으로 돌아와 공주와 결혼을 했고, 제우스가 변했던 흰 소를 기념하여 별자리를 만들었다는 이야기가 전해와요");
+                    intent.putExtra(EXTRA_TEXT, " 제우스가 페니키아의 공주를 유혹하기 위해 흰 황소로 변신했다고 해요. 변한 제우스는 목장에서 놀고 있는 공주를 크레타 섬으로 데려갔대요. 여기서 제우스는 원래 자기 모습으로 돌아와 공주와 결혼을 했고, 제우스가 변했던 흰 소를 기념하여 별자리를 만들었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_twin_btn:
@@ -105,37 +105,37 @@ public class StarActivity extends AppCompatActivity {
                 case R.id.star_crab_btn:
                     intent.putExtra("image", R.drawable.star_crab);
                     intent.putExtra(EXTRA_DATE, "6/22~7/22");
-                    intent.putExtra(EXTRA_TEXT, " 히드라라는 머리가 아홉 개 달리 뱀과 헤라클레스가 대혈전을 벌였다고 해요. 헤라는 히드라를 도와 헤라클레스를 없애기 위해 보낸 거대한 게로 헤라클레스의 발가락을 물었지만 분노한 헤라클래스의 발에 밟혀 죽고 말았대요. 헤라는 죽은 게에게 보답하기 위해 별자리로 만들어주었다는 이야기가 전해와요");
+                    intent.putExtra(EXTRA_TEXT, " 히드라라는 머리가 아홉 개 달리 뱀과 헤라클레스가 대혈전을 벌였다고 해요. 헤라는 히드라를 도와 헤라클레스를 없애기 위해 보낸 거대한 게로 헤라클레스의 발가락을 물었지만 분노한 헤라클래스의 발에 밟혀 죽고 말았대요. 헤라는 죽은 게에게 보답하기 위해 별자리로 만들어주었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_lion_btn:
                     intent.putExtra("image", R.drawable.star_lion);
                     intent.putExtra(EXTRA_DATE, "7/23~8/22");
-                    intent.putExtra(EXTRA_TEXT, " 네메아 숲에 무시무시한 황금빛 사자가 살았대요. 이 사자는 사람들을 괴롭혀서 헤라클레스가 사자를 죽였대요. 제우스는 헤라클레스의 승리를 기념하기 위해 이 사자를 별자리로 만들었다는 이야기가 전해와요.\n");
+                    intent.putExtra(EXTRA_TEXT, " 네메아 숲에 무시무시한 황금빛 사자가 살았대요. 이 사자는 사람들을 괴롭혀서 헤라클레스가 사자를 죽였대요. 제우스는 헤라클레스의 승리를 기념하기 위해 이 사자를 별자리로 만들었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_woman_btn:
                     intent.putExtra("image", R.drawable.star_woman);
                     intent.putExtra(EXTRA_DATE, "8/23~9/23");
-                    intent.putExtra(EXTRA_TEXT, " 대지의 여신 데메테르에게는 아름다운 봄의 여신 페르세포네라는 딸이 있었어요. 그런데 지옥의 왕인 하데스가 페르세포네를 강제로 납치해 아내로 삼았대요. 딸을 잃은 데메테르는 슬픔에 잠겨 대지에는 봄이 오지 않았고, 제우스는 1년의 6개월을 지하에서 남편과 살고 나머지 반은 지상에서 엄마인 데메테르와 살게 했대요. 데메테르의 모습을 본떠 처녀자리를 만들었다는 이야기가 전해와요\n");
+                    intent.putExtra(EXTRA_TEXT, " 대지의 여신 데메테르에게는 아름다운 봄의 여신 페르세포네라는 딸이 있었어요. 그런데 지옥의 왕인 하데스가 페르세포네를 강제로 납치해 아내로 삼았대요. 딸을 잃은 데메테르는 슬픔에 잠겨 대지에는 봄이 오지 않았고, 제우스는 1년의 6개월을 지하에서 남편과 살고 나머지 반은 지상에서 엄마인 데메테르와 살게 했대요. 데메테르의 모습을 본떠 처녀자리를 만들었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_balance_btn:
                     intent.putExtra("image", R.drawable.star_balance);
                     intent.putExtra(EXTRA_DATE, "9/24~10/22");
-                    intent.putExtra(EXTRA_TEXT, " 정의의 여신인 아스트라이아는 인간에게 싸우지 않고 사이좋게 사는 여러 가지 방법을 알려주었대요. 그런데도 인간들이 자꾸만 싸워서 인간 세상을 버리고 하늘로 올라갔대요. 하늘에서도 인가의 옳고 그름을 판단해 주었대요. 그때 사용했던 저울이 천칭자리가 되었다는 이야기가 전해와요.\n");
+                    intent.putExtra(EXTRA_TEXT, " 정의의 여신인 아스트라이아는 인간에게 싸우지 않고 사이좋게 사는 여러 가지 방법을 알려주었대요. 그런데도 인간들이 자꾸만 싸워서 인간 세상을 버리고 하늘로 올라갔대요. 하늘에서도 인가의 옳고 그름을 판단해 주었대요. 그때 사용했던 저울이 천칭자리가 되었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_scorpion_btn:
                     intent.putExtra("image", R.drawable.star_scorpion);
                     intent.putExtra(EXTRA_DATE, "10/23~11/22");
-                    intent.putExtra(EXTRA_TEXT, " 오리온은 매우 오만하여 세상의 모든 동물들을 죽일 수 있다고 떠들고 다녔대요. 올림포스 신들은 화가 났고 결구 헤라가 오리온을 죽이기 위해 전갈을 풀었대요. 오리온은 결국 죽었고. 오리온을 죽인 공로로 전갈을 하늘의 별자리가 되었다는 이야기가 전해와요");
+                    intent.putExtra(EXTRA_TEXT, " 오리온은 매우 오만하여 세상의 모든 동물들을 죽일 수 있다고 떠들고 다녔대요. 올림포스 신들은 화가 났고 결구 헤라가 오리온을 죽이기 위해 전갈을 풀었대요. 오리온은 결국 죽었고. 오리온을 죽인 공로로 전갈을 하늘의 별자리가 되었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_centaur_btn:
                     intent.putExtra("image", R.drawable.star_centaur);
                     intent.putExtra(EXTRA_DATE, "11/23~12/24");
-                    intent.putExtra(EXTRA_TEXT, " 케이론은 머리는 사람이고 몸은 말인 켄타우로스 족이었는데, 아주 훌륭하고 지혜로웠대요. 케이론은 아르고호를 타고 황금 양피를 찾아 나선 제자들을 안내하기 위해 스스로 자신의 모습을 별자리로 만들었다는 이야기가 전해와요");
+                    intent.putExtra(EXTRA_TEXT, " 케이론은 머리는 사람이고 몸은 말인 켄타우로스 족이었는데, 아주 훌륭하고 지혜로웠대요. 케이론은 아르고호를 타고 황금 양피를 찾아 나선 제자들을 안내하기 위해 스스로 자신의 모습을 별자리로 만들었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_goat_btn:
