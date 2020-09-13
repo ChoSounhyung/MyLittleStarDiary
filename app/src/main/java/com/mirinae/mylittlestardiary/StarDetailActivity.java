@@ -17,6 +17,8 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class StarDetailActivity extends AppCompatActivity {
+    private ImageView backBtn;
+
     private ImageView DetailStar;
     private TextView DetailDate;
     private TextView DetailText;
@@ -29,13 +31,22 @@ public class StarDetailActivity extends AppCompatActivity {
 
         init();
         onActivity();
+        backBtn.setOnClickListener(goBackPage);
     }
 
     private void init() {
+        backBtn = findViewById(R.id.star_back);
         DetailStar = findViewById(R.id.star_detail_star);
         DetailDate = findViewById(R.id.star_detail_date);
         DetailText = findViewById(R.id.star_detail_text);
     }
+
+    View.OnClickListener goBackPage = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            StarDetailActivity.this.finish();
+        }
+    };
 
     protected void onActivity() {
         Bundle b = getIntent().getExtras();
