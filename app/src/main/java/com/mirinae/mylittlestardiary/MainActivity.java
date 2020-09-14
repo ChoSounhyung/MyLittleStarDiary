@@ -1,7 +1,11 @@
 package com.mirinae.mylittlestardiary;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStore;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    public static final int ADD_DIARY_REQUEST = 1;
 
     private List<Diary> diaryList = new ArrayList<>();
     private RecyclerView diaryRecyclerView;
@@ -32,13 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         setBottomNav();
         init();
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, AddActivity.class));
-            }
-        });
+        setUp();
 
         Diary diary1 = new Diary("2020.09.05", "집 가고 싶다", "요즘에는 집에 있는데도 집에 가고싶은 기분이다..");
         Diary diary2 = new Diary("2020.09.08", "오느른 내생일", "오늘은 드디어 내 생일이다. 생일인데 집에서 온라인 수업을 듣다니, 기숙사가 아닌걸 다해이라고 해야되나.");
@@ -46,18 +46,45 @@ public class MainActivity extends AppCompatActivity {
         diaryList.add(diary1);
         diaryList.add(diary2);
 
+    }
+
+    public void init() {
+        diaryRecyclerView = findViewById(R.id.diary_recyclerview);
+        fab = findViewById(R.id.fab);
+    }
+
+    private void setUp() {
+        fab.setOnClickListener(goAddPage);
+
         // RecyclerView Adapter 생성 및 Diary List 전달
         diaryItemAdapter = new DiaryItemAdapter(diaryList, this);
         // RecyclerView Manager를 LinearLayout으로 설정
         diaryRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         // RecyclerView Adapter 설정
         diaryRecyclerView.setAdapter(diaryItemAdapter);
-
     }
 
-    public void init() {
-        diaryRecyclerView = findViewById(R.id.diary_recyclerview);
-        fab = findViewById(R.id.fab);
+    View.OnClickListener goAddPage = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this, AddActivity.class);
+            startActivityForResult(intent, ADD_DIARY_REQUEST);
+        }
+    };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        if (requestCode == ADD_DIARY_REQUEST && resultCode == RESULT_OK) {
+            String date = intent.getStringExtra("date");
+            String title = intent.getStringExtra("title");
+            String contents = intent.getStringExtra("contents");
+
+            Toast.makeText(this, "일기가 등록되었습니다.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "일기가 등록되지 않았습니다.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void setBottomNav() {
