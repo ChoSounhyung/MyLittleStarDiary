@@ -10,13 +10,21 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.w3c.dom.Text;
+
 public class AddActivity extends AppCompatActivity {
     private ImageView backBtn;
+    private TextView addBtn;
+    private EditText inputDate;
+    private EditText inputTitle;
+    private EditText inputContents;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +32,21 @@ public class AddActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         init();
-        backBtn.setOnClickListener(closePage);
+        setUp();
 
     }
 
     private void init() {
         backBtn = findViewById(R.id.add_back);
+        addBtn = findViewById(R.id.add_btn);
+        inputDate = findViewById(R.id.input_date);
+        inputTitle = findViewById(R.id.input_title);
+        inputContents = findViewById(R.id.input_contents);
+    }
+
+    private void setUp() {
+        backBtn.setOnClickListener(closePage);
+        addBtn.setOnClickListener(saveItem);
     }
 
     View.OnClickListener closePage = new View.OnClickListener() {
@@ -55,5 +72,25 @@ public class AddActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener saveItem = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            String date = inputDate.getText().toString().trim();
+            String title = inputTitle.getText().toString().trim();
+            String contents = inputContents.getText().toString().trim();
 
+            if (date.length() == 0 || title.length() == 0 || contents.length() == 0) {
+                Toast.makeText(getApplicationContext(), "날짜, 제목, 내용은 필수 항목입니다.", Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent();
+                intent.putExtra("date", date);
+                intent.putExtra("title", title);
+                intent.putExtra("contents", contents);
+
+                setResult(RESULT_OK, intent);
+
+                AddActivity.this.finish();
+            }
+        }
+    };
 }
