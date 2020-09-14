@@ -102,7 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:hint="엄마 생신"
+                        android:hint="제목을 입력하세요."
                         android:fontFamily="@font/main_font_regular"
                         android:textSize="18sp"
                         android:maxLines="1" />
