@@ -87,7 +87,7 @@ public class StarActivity extends AppCompatActivity {
                 case R.id.star_sheep_btn:
                     intent.putExtra("image", R.drawable.star_sheep);
                     intent.putExtra(EXTRA_DATE, "3/21~4/19");
-                    intent.putExtra(EXTRA_TEXT, " 보이오티아 왕 아타마스의 두 아이 프릭소스와 헬레 남매의 이야기에요. 남매의 친어머니인 구름의 요정 네펠레는 계모의 속임수로 인해 제물로 바쳐져 죽을 위기에 처한 자기 자식들의 모습을 보고 제우스에게 도움을 청했고, 제우스는 헤르메스를 통해 하늘을 달리는 황금 양을 보내 아이들을 돕게 했대요. 이 황금 양이 후에 하늘에 올라가 양자리가 되었다는 이야기가 전해와요.");
+                    intent.putExtra(EXTRA_TEXT, " 보이오티아 왕 아타마스의 두 아이 프릭소스와 헬레 남매의 이야기에요. 남매의 친어머니인 구름의 요정 네펠레는 계모의 속임수로 인해 제물로 바쳐져 죽을 위기에 처한 자기 자식들의 모습을 보고 제우스에게 도움을 청했대요. 그래서 제우스는 헤르메스를 통해 하늘을 달리는 황금 양을 보내 아이들을 돕게 했대요. 이 황금 양이 후에 하늘에 올라가 양자리가 되었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_ox_btn:
@@ -111,7 +111,7 @@ public class StarActivity extends AppCompatActivity {
                 case R.id.star_lion_btn:
                     intent.putExtra("image", R.drawable.star_lion);
                     intent.putExtra(EXTRA_DATE, "7/23~8/22");
-                    intent.putExtra(EXTRA_TEXT, " 네메아 숲에 무시무시한 황금빛 사자가 살았대요. 이 사자는 사람들을 괴롭혀서 헤라클레스가 사자를 죽였대요. 제우스는 헤라클레스의 승리를 기념하기 위해 이 사자를 별자리로 만들었다는 이야기가 전해와요.");
+                    intent.putExtra(EXTRA_TEXT, " 네메아 숲에 무시무시한 황금빛 사자가 살았대요. 이 사자는 사람들을 괴롭혀서 많은 사람들이 고통을 받았데요. 이를 참을 수 없었던 헤라클레스는 사자를 죽였대요. 헤라클레스의 승리를 기념하기 위해 이 사자를 별자리로 만들었다는 이야기가 전해와요.");
                     startActivity(intent);
                     break;
                 case R.id.star_woman_btn:
