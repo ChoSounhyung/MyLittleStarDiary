@@ -107,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:text="오늘은 내 생일"
+                        android:text="My Birthday"
                         android:fontFamily="@font/main_font_regular"
                         android:textSize="18sp"
                         android:textColor="@color/black" />
