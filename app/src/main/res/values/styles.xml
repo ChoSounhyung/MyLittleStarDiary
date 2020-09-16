@@ -6,6 +6,7 @@
         <!--Status bar 글자 색-->
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -14,7 +15,15 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name = "windowActionBar">false</item>
         <item name = "windowNoTitle">true</item>
+    </style>
 
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--Status Bar 배경색-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/navy</item>
+        <!--Status bar 글자 색-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <!--splash.png 적용 -->
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
 </resources>
