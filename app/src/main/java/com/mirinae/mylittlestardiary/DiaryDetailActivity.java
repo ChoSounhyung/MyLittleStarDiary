@@ -3,7 +3,6 @@ package com.mirinae.mylittlestardiary;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,6 +17,7 @@ public class DiaryDetailActivity extends AppCompatActivity {
 
         init();
         setUp();
+
     }
 
     private void init() {

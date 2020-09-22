@@ -3,6 +3,7 @@
     package="com.mirinae.mylittlestardiary">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -10,30 +11,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.StatusBar">
-        <activity android:name=".AddActivity"></activity>
+        android:theme="@style/AppTheme.StatusBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AddActivity" />
         <activity android:name=".DiaryDetailActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".StarDetailActivity" />
-        <activity android:name=".StarActivity" />
-
-        <!--스플래시 액티비티 -->
+        <activity android:name=".StarActivity" /> <!-- 스플래시 액티비티 -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name=".MainActivity">
-
-        </activity>
-
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

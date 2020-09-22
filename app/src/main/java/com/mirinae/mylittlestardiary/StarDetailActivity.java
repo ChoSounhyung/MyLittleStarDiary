@@ -1,20 +1,11 @@
 package com.mirinae.mylittlestardiary;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InlineSuggestionsRequest;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class StarDetailActivity extends AppCompatActivity {
     private ImageView backBtn;
@@ -50,10 +41,9 @@ public class StarDetailActivity extends AppCompatActivity {
 
     protected void onActivity() {
         Bundle b = getIntent().getExtras();
-
-        int image_link = (int) b.get("image");
-        String date = (String) b.get(StarActivity.EXTRA_DATE);
-        String text = (String) b.get(StarActivity.EXTRA_TEXT);
+        int image_link = b.getInt("image",0);
+        String date = b.getString(StarActivity.EXTRA_DATE);
+        String text = b.getString(StarActivity.EXTRA_TEXT);
 
         switch (date) {
             case "1/20~2/18":
