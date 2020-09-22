@@ -2,30 +2,30 @@ package com.mirinae.mylittlestardiary;
 
 public class Diary {
 
-    private int id;
-    private String date;
+    private int diary_id;
+    private String diary_day;
     private String title;
-    private String contents;
+    private String content;
 
     // Constructor
-    public Diary(String date, String title, String contents) {
-        this.date = date;
+    public Diary(String title, String diary_day) {
+        this.diary_day = diary_day;
         this.title = title;
-        this.contents = contents;
+        this.content = content;
     }
 
     // getter and setter
-    public int getId() {
-        return id;
+    public int getDiary_id() {
+        return diary_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setDiary_id(int diary_id) {
+        this.diary_id = diary_id;
     }
 
-    public String getDate() { return date; }
+    public String getDiary_day() { return diary_day; }
 
-    public void setDate(String date) { this.date = date; }
+    public void setDiary_day(String diary_day) { this.diary_day = diary_day; }
 
     public String getTitle() {
         return title;
@@ -35,7 +35,7 @@ public class Diary {
         this.title = title;
     }
 
-    public String getContents() { return contents; }
+    public String getContent() { return content; }
 
-    public void setContents(String contents) { this.contents = contents; }
+    public void setContent(String content) { this.content = content; }
 }
