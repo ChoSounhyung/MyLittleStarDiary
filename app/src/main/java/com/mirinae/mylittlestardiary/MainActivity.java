@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,24 +17,53 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mirinae.mylittlestardiary.adapter.DiaryItemAdapter;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MainActivity extends AppCompatActivity {
     public static final int ADD_DIARY_REQUEST = 1;
+    private static final String TAG = "스택:메인";
 
-    private List<Diary> diaryList = new ArrayList<>();
+    private static List<Diary> diaryList = new ArrayList<>();
     private RecyclerView diaryRecyclerView;
-    private DiaryItemAdapter diaryItemAdapter;
+    private RecyclerView.Adapter diaryItemAdapter;
     private FloatingActionButton fab;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e(TAG, "레트로핏 시작");
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(RetrofitService.URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        RetrofitService retrofitService = retrofit.create(RetrofitService.class);
+        retrofitService.getDiaryList().enqueue(new Callback<List<Diary>>() {
+            @Override
+            public void onResponse(Call<List<Diary>> call, Response<List<Diary>> response) {
+                Log.e(TAG, "레트로핏 get요청");
+                if (response.isSuccessful()) {
+                    Log.e(TAG, "레트로핏 get 성공");
+                    diaryList = response.body();
+                    for(int i = 0; i < diaryList.size(); i++){
+                        Log.e(TAG,diaryList.get(i).getTitle());
+                    }
+                    setUp();
+                }else{
+                    Log.e(TAG, "레트로핏 실패");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Diary>> call, Throwable t) { }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,21 +72,29 @@ public class MainActivity extends AppCompatActivity {
 
         setBottomNav();
         init();
-        setUp();
 
-        //dummy data
-        Diary diary = new Diary("2020.09.05", "MyBirthday", "오늘은 내 생일이다. 요즘에 너무 바빠서 내 생일도 잊고 있었는데 친구들이 서프라이즈 파티를 준비했다. 아침마다 아리야에게 오늘의 운세를 물어보는데 맨 처음 멘트가 ‘만족스러운 하루가 기대됩니다.’였다. 그래서 오늘 내내 기분이 좋았는데 친구들이 내 생일을 축하해 줘서 더 만족스러운 하루가 된 것 같다.\n처음에는 너무 놀라고 고마워서 눈물이 났다. 애들이랑 사진을 한 500장 정도 찍은 거 같은데 ㅋㅋㅋㅋ 꼭 인화해서 방 벽에 붙여놔야지. 생일 파티가 끝나고 친구들이랑 집에서 영화를 봤다. 이런 친구들이 없었다면 이번 생일은 미역국도 생일 케이크도 없이 그냥 지나갔을 텐데.. 잊지 않고 챙겨준 친구들의 생일에 내가 느낀 감동을 배로 전해주고 싶다.");
-        diaryList.add(diary);
+        //setUp();
+
+//        Diary diary1 = new Diary("MyBirthday", "2020.09.21");
+//        Diary diary2 = new Diary("ㅁㄴㅇㄹ", "2020.08.08");
+//        Diary diary3 = new Diary("ㄴㅇㅀ", "2020.07.26");
+//        Diary diary4 = new Diary("ㅂㅈㄷㄱ", "2020.10.06");
+//        diaryList.add(diary1);
+//        diaryList.add(diary2);
+//        diaryList.add(diary3);
+//        diaryList.add(diary4);
+
 
     }
 
     public void init() {
         diaryRecyclerView = findViewById(R.id.diary_recyclerview);
         fab = findViewById(R.id.fab);
+        fab.setOnClickListener(goAddPage);
     }
 
     private void setUp() {
-        fab.setOnClickListener(goAddPage);
+
 
         // RecyclerView Adapter 생성 및 Diary List 전달
         diaryItemAdapter = new DiaryItemAdapter(diaryList, this);
