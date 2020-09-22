@@ -14,6 +14,9 @@ import com.mirinae.mylittlestardiary.Diary;
 import com.mirinae.mylittlestardiary.DiaryClickListener;
 import com.mirinae.mylittlestardiary.R;
 
+import org.w3c.dom.Text;
+
+import java.nio.file.attribute.PosixFileAttributes;
 import java.util.List;
 
 
@@ -23,12 +26,14 @@ public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.Diar
 
     public static class DiaryItemViewHolder extends RecyclerView.ViewHolder {
         LinearLayout diaryItemContainer;
+        TextView diaryDate;
         TextView diaryTitle;
 
         // Constructor
         public DiaryItemViewHolder(View v) {
             super(v);
             diaryItemContainer = (LinearLayout) v.findViewById(R.id.diary_item_container);
+            diaryDate = v.findViewById(R.id.diary_date);
             diaryTitle = (TextView) v.findViewById(R.id.diary_title);
         }
     }
@@ -47,8 +52,10 @@ public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.Diar
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DiaryItemViewHolder holder, int position) {// onClick event
+    public void onBindViewHolder(@NonNull DiaryItemAdapter.DiaryItemViewHolder holder, int position) {// onClick event
         holder.diaryItemContainer.setOnClickListener(new DiaryClickListener(mainActivity, 1));
+        holder.diaryTitle.setText(diaryList.get(position).getTitle());
+        holder.diaryDate.setText(diaryList.get(position).getDiary_day());
     }
 
     @Override
