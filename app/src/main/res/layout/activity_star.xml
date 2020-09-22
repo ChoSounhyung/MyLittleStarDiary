@@ -1,210 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_star"
     tools:context=".StarActivity">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/back_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="matrix"
-            android:src="@drawable/back_star" />
-
-    </FrameLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/main_font_regular"
-                android:text="별자리 설화"
-                android:textColor="@color/white"
-                android:textSize="25sp" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="30dp">
-
-                <ImageButton
-                    android:id="@+id/star_bottle_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_bottle"
-                    app:layout_constraintEnd_toStartOf="@+id/star_fish_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/star_fish_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_fish"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_bottle_btn"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/star_sheep_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_sheep"
-                    app:layout_constraintEnd_toStartOf="@+id/star_ox_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/star_bottle_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_ox_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_ox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_sheep_btn"
-                    app:layout_constraintTop_toBottomOf="@+id/star_fish_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_twin_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_twin"
-                    app:layout_constraintEnd_toStartOf="@+id/star_crab_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/star_sheep_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_crab_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_crab"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_twin_btn"
-                    app:layout_constraintTop_toBottomOf="@+id/star_ox_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_lion_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_lion"
-                    app:layout_constraintEnd_toStartOf="@+id/star_woman_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/star_twin_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_woman_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_woman"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_lion_btn"
-                    app:layout_constraintTop_toBottomOf="@+id/star_crab_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_balance_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:src="@drawable/star_balance"
-                    app:layout_constraintEnd_toStartOf="@+id/star_scorpion_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/star_lion_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_scorpion_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_scorpion"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_balance_btn"
-                    app:layout_constraintTop_toBottomOf="@+id/star_woman_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_centaur_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:background="@drawable/star_rect"
-                    android:layout_marginTop="20dp"
-                    android:padding="20dp"
-                    android:src="@drawable/star_centaur"
-                    app:layout_constraintEnd_toStartOf="@+id/star_goat_btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/star_balance_btn" />
-
-                <ImageButton
-                    android:id="@+id/star_goat_btn"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/star_rect"
-                    android:padding="20dp"
-                    android:src="@drawable/star_goat"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/star_centaur_btn"
-                    app:layout_constraintTop_toBottomOf="@+id/star_scorpion_btn" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
         app:itemBackground="@color/black"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-</RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <ImageButton
+                android:id="@+id/star_bottle_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_bottle"
+                app:layout_constraintEnd_toStartOf="@+id/star_fish_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/star_fish_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_fish"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_bottle_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/star_sheep_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_sheep"
+                app:layout_constraintEnd_toStartOf="@+id/star_ox_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_bottle_btn" />
+
+            <ImageButton
+                android:id="@+id/star_ox_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_ox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_sheep_btn"
+                app:layout_constraintTop_toBottomOf="@+id/star_fish_btn" />
+
+            <ImageButton
+                android:id="@+id/star_twin_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_twin"
+                app:layout_constraintEnd_toStartOf="@+id/star_crab_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_sheep_btn" />
+
+            <ImageButton
+                android:id="@+id/star_crab_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_crab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_twin_btn"
+                app:layout_constraintTop_toBottomOf="@+id/star_ox_btn" />
+
+            <ImageButton
+                android:id="@+id/star_lion_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_lion"
+                app:layout_constraintEnd_toStartOf="@+id/star_woman_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_twin_btn" />
+
+            <ImageButton
+                android:id="@+id/star_woman_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_woman"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_lion_btn"
+                app:layout_constraintTop_toBottomOf="@+id/star_crab_btn" />
+
+            <ImageButton
+                android:id="@+id/star_balance_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star_rect"
+                android:src="@drawable/star_balance"
+                app:layout_constraintEnd_toStartOf="@+id/star_scorpion_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_lion_btn" />
+
+            <ImageButton
+                android:id="@+id/star_scorpion_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_scorpion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_balance_btn"
+                app:layout_constraintTop_toBottomOf="@+id/star_woman_btn" />
+
+            <ImageButton
+                android:id="@+id/star_centaur_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_centaur"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/star_goat_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/star_balance_btn" />
+
+            <ImageButton
+                android:id="@+id/star_goat_btn"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/star_rect"
+                android:padding="20dp"
+                android:src="@drawable/star_goat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/star_centaur_btn"
+                app:layout_constraintTop_toBottomOf="@+id/star_scorpion_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:fontFamily="@font/main_font_regular"
+        android:text="별자리 설화"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
