@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.e(TAG,diaryList.get(i).getTitle());
                     }
                     setUp();
+                    diaryRecyclerView.smoothScrollToPosition(0);
                 }else{
                     Log.e(TAG, "레트로핏 실패");
                 }
@@ -72,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
         setBottomNav();
         init();
-
         //setUp();
 
 //        Diary diary1 = new Diary("MyBirthday", "2020.09.21");
@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 //        diaryList.add(diary3);
 //        diaryList.add(diary4);
 
-
     }
 
     public void init() {
@@ -94,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUp() {
-
-
         // RecyclerView Adapter 생성 및 Diary List 전달
         diaryItemAdapter = new DiaryItemAdapter(diaryList, this);
         // RecyclerView Manager를 LinearLayout으로 설정
