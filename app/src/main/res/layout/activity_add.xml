@@ -1,136 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_star"
     tools:context=".AddActivity">
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/add_back"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="330dp"
+        android:layout_marginRight="330dp"
+        android:padding="20dp"
+        android:fontFamily="@font/main_font_regular"
+        android:src="@drawable/back_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="matrix"
-            android:src="@drawable/back_star" />
+    <TextView
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/main_font_bold"
+        android:text="추가"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </FrameLayout>
-
-    <RelativeLayout
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/add_back"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="35dp"
-            android:src="@drawable/back_icon"/>
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/star_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/add_btn"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="33dp"
-            android:layout_marginRight="35dp"
-            android:text="추가"
-            android:fontFamily="@font/main_font_bold"
-            android:textColor="@color/white"
-            android:textSize="21sp"/>
-
-        <RelativeLayout
-            android:layout_width="350dp"
-            android:layout_height="530dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
-            android:background="@drawable/star_rect">
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/main_font_regular"
+            android:text="날짜  :  "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp">
+        <EditText
+            android:id="@+id/input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            android:fontFamily="@font/main_font_regular"
+            android:hint="yyyy.mm.dd"
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/main_font_regular"
+            android:text="제목  :  "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="날짜  :  "
-                        android:textSize="18sp"
-                        android:fontFamily="@font/main_font_regular"
-                        android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/input_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:fontFamily="@font/main_font_regular"
+            android:hint="제목을 입력하세요."
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_date" />
 
-                    <EditText
-                        android:id="@+id/input_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:hint="yyyy.mm.dd"
-                        android:fontFamily="@font/main_font_regular"
-                        android:textSize="18sp"
-                        android:maxLines="1" />
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_title" />
 
-                </LinearLayout>
+        <EditText
+            android:id="@+id/input_contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@null"
+            android:fontFamily="@font/main_font_regular"
+            android:gravity="top"
+            android:hint=" 오늘의 운세와 하루는 어떠셨나요?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="제목  :  "
-                        android:textSize="18sp"
-                        android:fontFamily="@font/main_font_regular"
-                        android:textColor="@color/black"/>
-
-                    <EditText
-                        android:id="@+id/input_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:hint="제목을 입력하세요."
-                        android:fontFamily="@font/main_font_regular"
-                        android:textSize="18sp"
-                        android:maxLines="1" />
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="350dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/grey"/>
-
-                <EditText
-                    android:id="@+id/input_contents"
-                    android:layout_width="match_parent"
-                    android:layout_height="370dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@null"
-                    android:hint="내용을 입력하세요"
-                    android:gravity="top"
-                    android:fontFamily="@font/main_font_regular"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
