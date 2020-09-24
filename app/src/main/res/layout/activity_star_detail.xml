@@ -1,102 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity">
+    android:background="@drawable/back_star"
+    tools:context=".StarDetailActivity">
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/star_back"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="330dp"
+        android:layout_marginRight="330dp"
+        android:padding="20dp"
+        android:fontFamily="@font/main_font_regular"
+        android:src="@drawable/back_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/star_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="matrix"
-            android:src="@drawable/back_star" />
-
-    </FrameLayout>
-
-    <RelativeLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/star_back"
+            android:id="@+id/star_detail_star"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="35dp"
-            android:src="@drawable/back_icon"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/star_lion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:layout_width="350dp"
-            android:layout_height="530dp"
-            android:layout_marginTop="90dp"
+        <TextView
+            android:id="@+id/star_detail_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="asdfasdfa"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/star_detail_star" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
-            android:background="@drawable/star_rect">
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/star_detail_date" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:id="@+id/star_detail_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp">
+                android:fontFamily="@font/main_font_regular"
+                android:lineSpacingExtra="7dp"
+                android:text="제우스는 어렸을 때 크로노스에게서 마지막 남은 아들을 살리기 원했던 자신의 어머니 레아가 할머니인 가이아의 도움을 받아 몰래 빼돌려져서 크레타 섬의 요정들의 손에 자라게 되었어요. 이들 중 그곳의 요정들의 리더로 존재였던 염소 모습의 요정 아말테이아가 제우스를 자신의 양아들로 삼아 자신의 젖으로 제우스를 키웠다고 해요. 이후 성장하여 성인이 된 제우스는 티타노마키아를 준비하던 중 크레타에서 온 요정에게 염소 가죽을 받게 되었는데 그 가죽은 바로 아말테이아의 가죽이었데요. 아말테이아는 죽으면서 유언으로 자신의 가죽을 제우스에게 전해달라고 부탁했고 제우스는 자신을 돌봐준 양어머니인 아말테이아의 죽음에 슬퍼하며 자신을 돌봐준 그녀의 은혜에 보답하기 위해 그녀를 별자리로 다시 태어나게 만들었다는 이야기가 전해 와요."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+        </ScrollView>
 
-                    <ImageView
-                        android:id="@+id/star_detail_star"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/star_detail_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp"
-                        android:textSize="15sp"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="350dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/grey"/>
-
-                <ScrollView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
-
-                    <TextView
-                        android:id="@+id/star_detail_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/main_font_regular"
-                        android:lineSpacingExtra="7dp"
-                        android:textSize="16sp" />
-
-                </ScrollView>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
