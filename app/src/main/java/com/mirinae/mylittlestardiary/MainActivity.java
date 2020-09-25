@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int ADD_DIARY_REQUEST = 1;
     private static final String TAG = "스택:메인";
 
-    private static List<Diary> diaryList = new ArrayList<>();
+    public static List<Diary> diaryList = new ArrayList<>();
     private RecyclerView diaryRecyclerView;
     private RecyclerView.Adapter diaryItemAdapter;
     private FloatingActionButton fab;
@@ -83,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 //        diaryList.add(diary2);
 //        diaryList.add(diary3);
 //        diaryList.add(diary4);
-
     }
 
     public void init() {
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(this, "일기가 등록되었습니다.", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "일기가 등록되지 않았습니다.", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "일기가 등록되지 않았습니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -151,5 +151,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
