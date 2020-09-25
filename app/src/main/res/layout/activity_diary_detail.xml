@@ -136,7 +136,7 @@
             app:layout_constraintTop_toBottomOf="@+id/diary_title" />
 
         <TextView
-            android:id="@+id/input_contents"
+            android:id="@+id/diary_contents"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
