@@ -1,6 +1,8 @@
 package com.mirinae.mylittlestardiary.adapter;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mirinae.mylittlestardiary.Diary;
 import com.mirinae.mylittlestardiary.DiaryClickListener;
+import com.mirinae.mylittlestardiary.DiaryDetailActivity;
+import com.mirinae.mylittlestardiary.MainActivity;
 import com.mirinae.mylittlestardiary.R;
 
 import org.w3c.dom.Text;
@@ -53,7 +57,7 @@ public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.Diar
 
     @Override
     public void onBindViewHolder(@NonNull DiaryItemAdapter.DiaryItemViewHolder holder, int position) {// onClick event
-        holder.diaryItemContainer.setOnClickListener(new DiaryClickListener(mainActivity, 1));
+        holder.diaryItemContainer.setOnClickListener(new DiaryClickListener(mainActivity, position));
         holder.diaryTitle.setText(diaryList.get(position).getTitle());
         holder.diaryDate.setText(diaryList.get(position).getDiary_day());
     }
@@ -62,4 +66,6 @@ public class DiaryItemAdapter extends RecyclerView.Adapter<DiaryItemAdapter.Diar
     public int getItemCount() {
         return diaryList.size();
     }
+
+
 }
