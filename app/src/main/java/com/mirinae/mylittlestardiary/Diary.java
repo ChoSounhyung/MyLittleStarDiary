@@ -11,6 +11,11 @@ public class Diary {
     public Diary(String title, String diary_day) {
         this.diary_day = diary_day;
         this.title = title;
+    }
+
+    public Diary(String title, String diary_day, String content) {
+        this.diary_day = diary_day;
+        this.title = title;
         this.content = content;
     }
 
