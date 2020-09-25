@@ -23,12 +23,14 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Se
     public static class SearchItemViewHolder extends RecyclerView.ViewHolder {
         LinearLayout searchItemContainer;
         TextView searchTitle;
+        TextView searchDate;
 
         // Constructor
         public SearchItemViewHolder(View v) {
             super(v);
             searchItemContainer = (LinearLayout) v.findViewById(R.id.search_item_container);
             searchTitle = (TextView) v.findViewById(R.id.search_title);
+            searchDate = v.findViewById(R.id.search_date);
         }
     }
 
@@ -47,7 +49,9 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.Se
 
     @Override
     public void onBindViewHolder(@NonNull SearchItemViewHolder holder, int position) {// onClick event
-        holder.searchItemContainer.setOnClickListener(new DiaryClickListener(searchActivity, 1));
+        holder.searchItemContainer.setOnClickListener(new DiaryClickListener(searchActivity, position));
+        holder.searchTitle.setText(diaryList.get(position).getTitle());
+        holder.searchDate.setText(diaryList.get(position).getDiary_day());
     }
 
     @Override
